@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62,5%;
+}
+
+.list {
+    padding: 5rem;
+}
+
+.menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    background-color: black;
+    color: white;
+    border-color: white;
+    border-style: solid;
+    border-radius: 6px;
+}
+
+.menu:hover {
+    background-color: rgb(42, 41, 41);
+    transition: 0.5s;
+}
+
+.desplegable {
+    position: absolute;
+    left: 1000%;
+    background-color: rgb(47, 47, 47);
+    color: white;
+    width: 50rem;
+    transition: 1s;
+
+}
+
+.desplegable>p{
+    padding: 1rem 5rem;
+}
+
+#menu:hover > .desplegable {
+    left: 0;
+    transition: 1s;
+}
