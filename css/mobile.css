@@ -224,6 +224,7 @@ li.home img {
     padding: var(--btnSize);
     border-radius: 5px;
     border: none;
+    cursor: pointer;
 }
     .whatsapp-btn:hover{
         background: #0d6259;
@@ -279,7 +280,7 @@ li.home img {
     gap: 2rem;
 }
 
-div{
+.mobile_menu,.slider,.main_content,.footer_container{
     display: none;
 }
 
