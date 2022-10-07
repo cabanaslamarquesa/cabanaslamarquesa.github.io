@@ -219,15 +219,18 @@ li.home img {
 
 .whatsapp-btn {
     background: #128c7e;
-    color: white;
-    font-size: x-large;
     padding: var(--btnSize);
     border-radius: 5px;
     border: none;
     cursor: pointer;
+    color: white;
+    font-size: x-large;
+    text-decoration: none;
+    transition: 0.4s ease all;
 }
     .whatsapp-btn:hover{
         background: #0d6259;
+        color: rgb(202, 202, 202);
     }
 
 .social_networks {
