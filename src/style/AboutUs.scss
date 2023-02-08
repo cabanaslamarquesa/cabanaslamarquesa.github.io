@@ -1,0 +1,82 @@
+@import './Global.scss';
+
+.about-us {
+    @include cards();
+
+    opacity: 0;
+    transition: .3s ease all;
+
+    img {
+        opacity: 0;
+    }
+    article {
+        opacity: 0;
+    }
+    a {
+        opacity: 0;
+    }
+
+    &.visible {
+        opacity: 1;
+
+        img {
+            animation: right .6s ease .3s forwards;
+        }
+        article {
+            animation: left .6s ease .5s forwards;
+        }
+        a {
+            animation: down .6s ease .7s forwards;
+        }
+    }
+
+    &__title--desktop {
+        display: none;
+    }
+
+    @include media(desktop-s){
+        &__title--desktop {
+            display: block;
+        }
+    
+        img {
+            order: 1;
+        }
+    
+        &__title--mobile {
+            display: none;
+        }
+    
+        a {
+            order: 1;
+        }
+    }
+}
+
+.about-us--main {
+    display: flex;
+    justify-content: center;
+    
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 26px;
+        width: 100%;
+        max-width: 1000px;
+        padding: 44px 35px;
+
+        img {
+            width: 80%;
+            height: 30vh;
+        }
+
+        @include media(tablet){
+            img {
+                width: 50%;
+                height: 50vh;
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+@import './Global.scss';
+
+.service{
+    opacity: 0;
+    transition: .3s ease all;
+    &-list {
+        display: flex;
+        justify-content: space-between;
+
+        visibility: hidden;
+        
+        li {
+            cursor: pointer;
+        }
+    }
+
+    &.visible{
+        opacity: 1;
+
+        ul{
+            visibility: visible;
+            animation: down .3s ease 1s forwards;
+        }
+    }
+}

@@ -1,0 +1,79 @@
+@import './Global.scss';
+
+.main-containers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    
+    &--gray {
+        background-color: $gray;
+    }
+
+    & div{
+        padding: 20px;
+        width: 100%;
+        max-width: 730px;
+
+        @include media(desktop-s){
+            max-width: 1000px;
+        }
+    }
+}
+
+img{
+    width: 80%;
+    height: 35vh;
+    border-radius: 16px;
+    object-fit: cover;
+
+    @include media(tablet){
+        width: 50%;
+        height: 350px;
+    }
+
+    @include media(desktop-s){
+        width: 30%;
+        height: 300px;
+    }
+}
+
+
+//animations
+
+@keyframes left {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes right {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes down {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    
+}

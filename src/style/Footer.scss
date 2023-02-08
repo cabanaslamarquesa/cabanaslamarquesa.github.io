@@ -1,0 +1,66 @@
+@import './Global.scss';
+
+.footer-container{
+    display: flex;
+    justify-content: center;
+    background-color: $black;
+    color:$white
+}
+
+.foot {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    padding: 16px 20px;
+
+    &-contain {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__list{
+        display: flex;
+        text-align: center;
+        justify-content: space-evenly;
+        & li{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            transition: .3s ease all;
+        }
+
+        & li a {
+            // font-size: $medium;
+            color: $white;
+        }
+    }
+}
+
+.facebook:hover{
+    background-color: #1775f1;
+}
+
+.instagram:hover{
+    background-color: lightcoral;
+}
+
+.twitter:hover{
+    background-color: #1b99ed;
+}
+
+@include media(desktop-s) {
+    .foot {
+        flex-direction: row;
+        padding: 16px 8px;
+        width: 1000px;
+    
+        &-contain {
+            width: 30%;
+        }
+    }
+}

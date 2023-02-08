@@ -1,0 +1,138 @@
+@import "./Global.scss";
+
+.header-container {
+    display: block;
+    height: 76px;
+    position: relative;
+}
+
+.nav {
+    display: block;
+    width: 100%;
+    height: 76px;
+    background-color: $gray;
+    color: $black;
+
+    &-bar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        padding: 8px 3%;
+        background-color: $white;
+        z-index: 10;
+        // font-size: $big;
+
+        &__logo{
+            background-image: url("../assets/LOGO.svg");background-size: contain;
+            background-repeat: no-repeat;
+            width: 40%;
+            height: 60px;
+        }
+
+        &__menu{
+            font-size: $big;
+            cursor: pointer;
+        }
+
+        &__items--desktop{
+            display: none;
+        }
+    }    
+
+    &-menu {
+        width: 100%;
+        position: fixed;
+        z-index: 100;
+        margin-top: 76px;
+        left: 100%;
+        background-color: $white;
+        border-radius: 0 0 60px 60px;
+
+        transition: 0.8s ease all;
+
+        &.active {
+            left: 0;
+        }
+
+        &__items--mobile {
+            display: flex;
+            flex-direction: column;
+            gap: 26px;
+            justify-content: space-between;
+            align-items: center;
+            padding: 28px 3%;
+            // font-size: $big;
+
+            @include media(desktop-s){
+                display: none;
+            }
+        }
+    }
+}  
+
+
+.mobile__items__btn{
+    list-style: none;
+    position: relative;
+
+    a{
+        color: $black;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: $big;
+
+        &:hover{
+            color: $dark_green;
+        }
+    }
+
+    &.active a{
+        color: $green;
+    }
+}
+
+/**/
+@include media(desktop-s) {
+    .nav-bar{
+        flex-wrap: nowrap;
+    
+        &__items--desktop{
+            display: flex;
+            gap: 16px;
+        }
+    
+        &__menu--desktop{
+            display: none;
+        }
+    }
+    
+    .desktop__items__btn{
+        list-style: none;
+        position: relative;
+    
+        & a{
+            color: $black;
+            text-decoration: none;
+            // font-size: $medium;
+            font-weight: 500;
+    
+            &:hover{
+                color: $dark_green;
+            }
+        }
+    
+        &.active::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: $green;
+            position: absolute;
+            bottom: -5px;
+            border-radius: 50%;
+        }
+    }
+}

@@ -1,3 +1,2 @@
-# img
-*.jpg
-*.JPG
+node_modules
+build

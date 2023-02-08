@@ -1,0 +1,30 @@
+@import './Global.scss';
+
+.location {
+    @include cards();
+    justify-content: space-around !important;
+
+    &__map {
+        height: 40vh;
+        border-radius: 14px;
+    }
+
+    @include media(tablet){
+        &__map{
+            width: 80vw;
+        }
+    }
+
+    @include media(desktop-s){
+        h2 {
+            width: 100%;
+        }
+        p {
+            width: 40%;
+        }
+        &__map {
+            width: 500px;
+            height: 400px;
+        }
+    }
+}
